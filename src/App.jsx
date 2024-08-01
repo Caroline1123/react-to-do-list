@@ -11,9 +11,12 @@ const App = () =>  {
 
   useEffect(()=> {
     const storedTasks = localStorage.getItem('tasks') || [];
-    if (storedTasks) {
+    if (storedTasks.length > 0) {
       const taskArray = JSON.parse(storedTasks);
       setTasks(taskArray);
+    }
+    else {
+      setTasks([])
     }
     }, [])
 
