@@ -1,3 +1,5 @@
+import deleteIcon from './../assets/images/delete.svg';
+
 const List = ({tasks, onChangeStatus, onDeleteTask}) => {
 
     const handleStatusChange = (e) => {
@@ -34,7 +36,7 @@ const List = ({tasks, onChangeStatus, onDeleteTask}) => {
                         <span className={`text-lg ${task.completed ? 'line-through text-gray-500' : 'text-gray-800'}`}>
                             {task.task}
                         </span>
-                        <img src="./src/assets/images/delete.svg" className="w-6 ml-auto cursor-pointer" onClick={handleDelete} id = {`item_${index}`}/>
+                        <img src={deleteIcon} className="w-6 ml-auto cursor-pointer" onClick={handleDelete} id = {`item_${index}`}/>
                     </li>
                 ))
                 )
